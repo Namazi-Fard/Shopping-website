@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = ({ label, error, ...props }) => {
   return (
-    <div className="flex flex-col gap-1.5 w-full">
+    <div className="flex flex-col gap-1.5 w-full text-right">
       {/* نمایش لیبل در صورت وجود */}
       {label && (
         <label className="text-sm font-medium text-gray-700 mr-1">
