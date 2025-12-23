@@ -8,7 +8,10 @@ const Button = ({ children, variant = "primary", ...props }) => {
   // ۲. تعریف مدل‌های مختلف دکمه (رنگ‌بندی)
   const variants = {
     primary: "bg-blue-600 text-white hover:bg-blue-800 shadow-md",
-    outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
+    secondary:
+      "bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-100",
+    outline:
+      "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
     danger: "bg-red-500 text-white hover:bg-red-700",
   };
 

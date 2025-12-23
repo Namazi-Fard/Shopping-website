@@ -29,7 +29,7 @@ const Navbar = ({ logo, links = [], actions, className = "" }) => {
       </ul>
 
       {/* بخش دکمه‌ها یا عملیات‌ها */}
-      <div className="flex items-center gap-3">{actions}</div>
+      <div className="flex items-center gap-5">{actions}</div>
     </nav>
   );
 };

@@ -14,10 +14,14 @@ const Input = ({ label, error, ...props }) => {
       <input
         className={`
           px-4 py-2 rounded-lg border transition-all outline-none
+        border-gray-300 focus:ring-2
+        focus:ring-blue-500
+          focus:border-transparent
+          duration-200
           ${
             error
-              ? "border-red-500 focus:ring-2 focus:ring-red-200"
-              : "border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+              ? "border-red-500 focus:ring-4 focus:ring-red-100"
+              : "border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
           }
         `}
         {...props}
