@@ -1,57 +1,37 @@
 import Button from "../components/Button.jsx";
 import Input from "../components/Input";
-import Navbar from '../components/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import Navbar from "../components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import Products from "../pages/Products";
 
 // App Component
 // This is the main entrance of our application.
 // این فایل نقطه شروع برنامه ماست.
 
-const myNavigationLinks = [
-    { title: 'صفحه اصلی', href: '/' },
-    { title: 'محصولات', href: '/products' },
-    { title: 'درباره ما', href: '/about' }
-  ];
+const myLinks = [
+  { title: "خانه", href: "/" },
+  { title: "محصولات", href: "/products" },
+];
 function App() {
-  return <>
+  return (
+    <>
       {/* تست نوبار */}
-      <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <div>
-      {/* در مرحله بعد می‌بینیم چطور این آرایه را به نوبار "پاس" می‌دهیم */}
-      <Navbar links={myNavigationLinks} />
-    </div>
-      <main className="p-10 flex flex-col gap-6 max-w-md mx-auto">
-        <Input label="نام کاربری" placeholder="ali_dev" />
-        <Input label="رمز عبور" type="password" />
-      </main>
-    </div>
-      {/* تست دکمه‌های هوشمند */}
-  <div className="p-10 flex flex-col gap-4 items-center">
-        <h1 className="text-xl font-bold">تست دکمه‌های هوشمند ما:</h1>
-        {/* دکمه اصلی */}
-        <Button>ذخیره تغییرات</Button>
-
-        {/* دکمه با مدل خطی */}
-        <Button variant="outline">انصراف</Button>
-
-        {/* دکمه با مدل خطرناک */}
-        <Button variant="danger" onClick={() => alert("پاک شد!")}>
-          حذف محصول
-        </Button>
+        <Navbar links={myLinks} logo="فروشگاه من" />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="p-10">
+                <h2>به صفحه اصلی خوش آمدید</h2>
+              </div>
+            }
+          />
+          <Route path="/products" element={<Products />} />
+        </Routes>
       </div>
-      {/* تست فیلدهای ورودی هوشمند */}
-      <div className="p-10 flex flex-col gap-6 max-w-md mx-auto">
-        <Input label="نام کاربری" placeholder="مثلاً: ali_developer" />
-
-        <Input
-          label="ایمیل"
-          type="email"
-          placeholder="example@mail.com"
-          error="فرمت ایمیل صحیح نیست"
-        />
-      </div>
-  </>;
+    </>
+  );
 }
 
 export default App;
