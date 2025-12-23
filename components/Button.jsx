@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ children, variant = "primary", ...props }) => {
+const Button = ({ children, variant = "primary", className = "", ...props }) => {
   // ۱. تعریف استایل‌های پایه (چیزهایی که در همه دکمه‌ها مشترک است)
   const baseStyle =
     "px-6 py-2 rounded-lg font-medium transition-all duration-300 active:scale-90";
@@ -16,7 +16,7 @@ const Button = ({ children, variant = "primary", ...props }) => {
   };
 
   return (
-    <button className={`${baseStyle} ${variants[variant]}`} {...props}>
+    <button className={`${baseStyle} ${variants[variant]} ${className}`} {...props}>
       {children}
     </button>
   );
