@@ -1,12 +1,32 @@
 import Button from "../components/Button.jsx";
 import Input from "../components/Input";
+import Navbar from '../components/Navbar';
+import { Routes, Route } from 'react-router-dom';
 
 // App Component
 // This is the main entrance of our application.
 // این فایل نقطه شروع برنامه ماست.
+
+const myNavigationLinks = [
+    { title: 'صفحه اصلی', href: '/' },
+    { title: 'محصولات', href: '/products' },
+    { title: 'درباره ما', href: '/about' }
+  ];
 function App() {
   return <>
-  {/* تست دکمه‌های هوشمند */}
+      {/* تست نوبار */}
+      <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <div>
+      {/* در مرحله بعد می‌بینیم چطور این آرایه را به نوبار "پاس" می‌دهیم */}
+      <Navbar links={myNavigationLinks} />
+    </div>
+      <main className="p-10 flex flex-col gap-6 max-w-md mx-auto">
+        <Input label="نام کاربری" placeholder="ali_dev" />
+        <Input label="رمز عبور" type="password" />
+      </main>
+    </div>
+      {/* تست دکمه‌های هوشمند */}
   <div className="p-10 flex flex-col gap-4 items-center">
         <h1 className="text-xl font-bold">تست دکمه‌های هوشمند ما:</h1>
         {/* دکمه اصلی */}
