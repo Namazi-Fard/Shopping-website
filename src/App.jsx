@@ -1,11 +1,11 @@
-import Button from "../components/Button.jsx";
-import Input from "../components/Input";
-import Navbar from "../components/Navbar";
+import Button from "./components/Button.jsx";
+import Input from "./components/Input.jsx";
+import Navbar from "./components/Navbar.jsx";
 import { Routes, Route } from "react-router-dom";
-import Products from "../pages/Products";
-import Home from "../pages/Home";
-import Footer from "../components/Footer";
-import MainLayout from '../layouts/MainLayout';
+import Products from "./pages/Products.jsx";
+import Home from "./pages/Home.jsx";
+import Footer from "./components/Footer.jsx";
+import MainLayout from "./layouts/MainLayout.jsx";
 
 // App Component
 // This is the main entrance of our application.
@@ -24,8 +24,12 @@ const myLinks = [
 
 const authButtons = (
   <>
-    <Button variant="outline" className="text-sm md:text-base">ورود</Button>
-    <Button variant="primary" className="text-sm md:text-base">ثبت‌نام</Button>
+    <Button variant="outline" className="text-sm md:text-base">
+      ورود
+    </Button>
+    <Button variant="primary" className="text-sm md:text-base">
+      ثبت‌نام
+    </Button>
   </>
 );
 function App() {

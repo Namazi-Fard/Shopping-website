@@ -7,7 +7,6 @@ import monitorImg from "../assets/images/monitor.webp";
 import printerImg from "../assets/images/printer.webp";
 import laptopImg from "../assets/images/laptop.webp";
 
-
 const Products = () => {
   const productsList = [
     { id: 1, name: "لپ‌تاپ", price: "۴۵ م", image: laptopImg },
@@ -23,19 +22,20 @@ const Products = () => {
       <h1 className="text-2xl font-bold mb-6">لیست محصولات</h1>
       <div className="grid grid-cols-3 gap-8">
         {productsList.map((item) => (
-          <div key={item.id} className="border p-4 rounded-xl flex flex-col items-center">
+          <div
+            key={item.id}
+            className="border p-4 rounded-xl flex flex-col items-center"
+          >
             <div className="overflow-hidden rounded-xl mb-4 h-48 bg-gray-50">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-            />
-          </div>
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
             <h3>{item.name}</h3>
             <p>قیمت: {item.price}</p>
-            <Button variant="primary">
-              خرید محصول
-            </Button>
+            <Button variant="primary">خرید محصول</Button>
           </div>
         ))}
       </div>
