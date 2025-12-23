@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Products from "../pages/Products";
 import Home from "../pages/Home";
+import Footer from "../components/Footer";
 
 // App Component
 // This is the main entrance of our application.
@@ -29,13 +30,15 @@ const authButtons = (
 function App() {
   return (
     <>
-      {/* تست نوبار */}
-      <div>
+      <div className="flex flex-col min-h-screen">
         <Navbar links={myLinks} logo="فروشگاه من" actions={authButtons} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-        </Routes>
+        <main className="grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </>
   );
