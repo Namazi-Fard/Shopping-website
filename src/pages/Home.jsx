@@ -4,13 +4,13 @@ import heroImage from '../assets/images/monitor.webp';
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-6 py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-10">
+    <div className="container mx-auto px-6 py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* بخش متن‌ها */}
       <div className="flex-1 text-center md:text-right" dir="rtl">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-          دنیای تکنولوژی در <span className="text-blue-600">دستان شما</span>
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight mb-6 transition-colors duration-300">
+          دنیای تکنولوژی در <span className="text-blue-600 dark:text-blue-500">دستان شما</span>
         </h1>
-        <p className="text-gray-600 text-lg mb-8 leading-8">
+        <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-8 transition-colors duration-300">
           جدیدترین و باکیفیت‌ترین محصولات دیجیتال را با ضمانت اصالت و ارسال سریع از فروشگاه ما تهیه کنید. بهترین قیمت‌ها منتظر شماست.
         </p>
         <div className="flex gap-4 justify-center md:justify-start">

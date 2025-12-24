@@ -24,10 +24,16 @@ const myLinks = [
 
 const authButtons = (
   <>
-    <Button variant="outline" className="text-sm md:text-base">
+    <Button
+      variant="outline"
+      className="text-sm md:text-base dark:border-gray-400 dark:text-gray-300"
+    >
       ورود
     </Button>
-    <Button variant="primary" className="text-sm md:text-base">
+    <Button
+      variant="primary"
+      className="text-sm md:text-base dark:border-gray-400 dark:text-gray-300"
+    >
       ثبت‌نام
     </Button>
   </>
@@ -35,7 +41,7 @@ const authButtons = (
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
         <MainLayout links={myLinks} logo="فروشگاه من" actions={authButtons}>
           <Routes>
             <Route path="/" element={<Home />} />
