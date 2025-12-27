@@ -19,12 +19,12 @@ const Products = () => {
 
   return (
     <div className="p-8 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <h1 className="text-2xl font-bold mb-6">لیست محصولات</h1>
-      <div className="grid grid-cols-3 gap-8">
+      <h1 className="text-2xl font-bold mb-6 text-center">لیست محصولات</h1>
+      <div className="grid md:grid-cols-3 md:gap-8 grid-cols-1 gap-15">
         {productsList.map((item) => (
           <div
             key={item.id}
-            className="border p-4 rounded-xl flex flex-col items-center dark:border-gray-700 dark:bg-gray-900 transition-colors duration-300"
+            className="border p-4 rounded-xl flex flex-col items-center   gap-y-7 dark:border-gray-700 dark:bg-gray-900 transition-colors duration-300 "
           >
             <div className="overflow-hidden rounded-xl mb-4 h-48 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
               <img
