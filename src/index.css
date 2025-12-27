@@ -1,9 +1,12 @@
 @import "tailwindcss";
-
-/* فعال‌سازی حالت تاریک کلاس‌محور در نسخه ۴ */
-/* @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui;
-} */
-
 /* این بخش به تیلویند می‌گوید که اگر کلاس dark وجود داشت، استایل‌ها را اعمال کند */
 @variant dark (&:where(.dark, .dark *));
+@layer base {
+  body {
+    /* اضافه کردن ترنزیشن روی تمام خواص رنگی */
+    @apply bg-white text-gray-900 transition-colors duration-500 ease-in-out;
+  }
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}

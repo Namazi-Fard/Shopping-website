@@ -12,7 +12,7 @@ const Navbar = ({ logo, links = [], actions, className = "" }) => {
 
   return (
     <nav
-      className={`flex items-center justify-between mb-8 px-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 w-full transition-colors duration-300 ${className}`}
+      className={`flex items-center justify-between mb-8 px-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 w-full transition-all duration-500 ease-in-out ${className}`}
       dir="rtl"
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between py-4">
@@ -42,10 +42,14 @@ const Navbar = ({ logo, links = [], actions, className = "" }) => {
           {/* دکمه سوئیچ تم */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-blue-500 transition-all focus:outline-none"
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800
+            transition-all duration-500 active:scale-90
+            text-gray-600 dark:text-yellow-400 hover:ring-2 ring-blue-500 focus:outline-none"
           >
-            {/* اگر تم فعلی دارک است، خورشید نشان بده (برای رفتن به لایت) و برعکس */}
-            {theme === "dark" ? <HiSun size={24} /> : <HiMoon size={24} />}
+            <div className="transition-all duration-500 rotate-0 dark:rotate-[360deg]">
+              {/* اگر تم فعلی دارک است، خورشید نشان بده (برای رفتن به لایت) و برعکس */}
+              {theme === "dark" ? <HiSun size={24} /> : <HiMoon size={24} />}
+            </div>
           </button>
 
           {/* دکمه‌های ورود/ثبت‌نام */}
