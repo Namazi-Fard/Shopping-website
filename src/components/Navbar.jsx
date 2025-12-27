@@ -1,15 +1,18 @@
 import React from "react";
-import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { HiMoon, HiSun } from "react-icons/hi";
 
 const Navbar = ({ logo, links = [], actions, className = "" }) => {
-  const [colorTheme, setTheme] = useDarkMode();
+  const [theme, setTheme] = useDarkMode();
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+  };
 
   return (
     <nav
-      className={`flex items-center justify-between mb-8 px-8 py-4 bg-whit border-b border-gray-100 dark:border-gray-800 w-full transition-colors duration-300 ${className}`}
+      className={`flex items-center justify-between mb-8 px-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 w-full transition-colors duration-300 ${className}`}
       dir="rtl"
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between py-4">
@@ -38,14 +41,11 @@ const Navbar = ({ logo, links = [], actions, className = "" }) => {
         <div className="flex items-center gap-5">
           {/* دکمه سوئیچ تم */}
           <button
-            onClick={() => setTheme(colorTheme)}
+            onClick={toggleTheme}
             className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-blue-500 transition-all focus:outline-none"
           >
-            {colorTheme === "light" ? (
-              <HiSun size={24} />
-            ) : (
-              <HiMoon size={24} />
-            )}
+            {/* اگر تم فعلی دارک است، خورشید نشان بده (برای رفتن به لایت) و برعکس */}
+            {theme === "dark" ? <HiSun size={24} /> : <HiMoon size={24} />}
           </button>
 
           {/* دکمه‌های ورود/ثبت‌نام */}
@@ -57,44 +57,3 @@ const Navbar = ({ logo, links = [], actions, className = "" }) => {
 };
 
 export default Navbar;
-
-// import React from "react";
-// import Button from "./Button";
-// import { NavLink } from "react-router-dom";
-// import { useDarkMode } from '../hooks/useDarkMode';
-// import { HiMoon, HiSun } from 'react-icons/hi';
-
-// const Navbar = ({ logo, links = [], actions, className = "" }) => {
-//   return (
-//     <nav
-//       className={`flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100 w-full ${className}`}
-//       dir="rtl"
-//     >
-//       {/* بخش لوگو: هر چیزی می‌تواند باشد (عکس یا متن) */}
-//       <div className="flex items-center gap-2">{logo}</div>
-
-//       {/* بخش لینک‌ها: به صورت خودکار از روی یک لیست ساخته می‌شود */}
-//       <ul className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
-//         {links.map((link, index) => (
-//           <li key={index}>
-//             <NavLink
-//               to={link.href}
-//               className={({ isActive }) =>
-//                 isActive
-//                   ? "text-blue-600 font-bold"
-//                   : "text-gray-600 hover:text-blue-600"
-//               }
-//             >
-//               {link.title}
-//             </NavLink>
-//           </li>
-//         ))}
-//       </ul>
-
-//       {/*مثلا بخش دکمه‌ها یا عملیات‌ها */}
-//       <div className="flex items-center gap-5">{actions}</div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;

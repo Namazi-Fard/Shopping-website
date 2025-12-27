@@ -9,7 +9,7 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 dark:bg-gray-900 text-gray-300 dark:text-gray-100 py-12 mt-20 transition-colors duration-300" dir="rtl">
+    <footer className="bg-gray-500 dark:bg-gray-900 text-white dark:text-gray-100 py-12 mt-20 transition-colors duration-300" dir="rtl">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-right">
         {/* بخش اول: درباره ما */}
         <div className="flex flex-col items-center ">
