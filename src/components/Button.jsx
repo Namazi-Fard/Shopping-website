@@ -14,9 +14,10 @@ const Button = ({ children, variant = "primary", className = "", ...props }) => 
       "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white",
     danger: "bg-red-500 text-white hover:bg-red-700",
   };
+  const disabledStyle = "disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale disabled:shadow-none disabled:active:scale-100";
 
   return (
-    <button className={`${baseStyle} ${variants[variant]} ${className}`} {...props}>
+    <button className={`${baseStyle} ${variants[variant]} ${disabledStyle} ${className}`} {...props}>
       {children}
     </button>
   );

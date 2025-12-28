@@ -6,6 +6,7 @@ import Products from "./pages/Products.jsx";
 import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
+import ProductDetails from "./pages/ProductDetails";
 
 // App Component
 // This is the main entrance of our application.
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductDetails />}/>
           </Routes>
         </MainLayout>
       </div>
