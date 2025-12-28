@@ -7,6 +7,7 @@ import monitorImg from "../assets/images/monitor.webp";
 import printerImg from "../assets/images/printer.webp";
 import laptopImg from "../assets/images/laptop.webp";
 import Badge from "../components/Badge";
+import { formatPrice } from "../utils/formatPrice";
 
 const Products = () => {
   const productsList = [
@@ -213,7 +214,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="container mx-auto p-8 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+    <div className="container mx-auto p-8 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500 rounded-2xl">
       <h2 className="text-3xl font-black mb-12 text-center">
         <span className="border-b-4 border-blue-600 pb-2">لیست محصولات</span>
       </h2>
@@ -280,8 +281,7 @@ const Products = () => {
                 <div className="h-6 flex items-center justify-center">
                   {item.discount > 0 ? (
                     <span className="text-sm text-gray-400 line-through decoration-red-500/50">
-                      {"\u200E"}
-                      {item.price} تومان
+                      {"\u200E"}{formatPrice(item.price)} تومان
                     </span>
                   ) : (
                     /* این فضای خالی باعث می‌شود ارتفاع کارت‌ها بدون تخفیف کم نشود */
@@ -293,12 +293,7 @@ const Products = () => {
                 <div className="flex justify-center items-center gap-2">
                   <span className="text-2xl font-black text-blue-600 dark:text-blue-400">
                     {"\u200E"}
-                    {item.discount > 0
-                      ? (
-                          parseInt(item.price.replace(/'/g, "")) *
-                          (1 - item.discount / 100)
-                        ).toLocaleString()
-                      : item.price}
+                    {formatPrice(item.price, item.discount)}
                   </span>
                   <span className="text-sm text-gray-500">تومان</span>
                 </div>
