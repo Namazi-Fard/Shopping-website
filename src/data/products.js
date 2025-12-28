@@ -15,16 +15,25 @@ export const productsList = [
     discount: 12,
     sales: 120,
     category: "laptop",
+    features: ["پردازنده Core i9 نسل 13", "گرافیک RTX 4080", "رم 32GB DDR5", "نمایشگر 165Hz QHD"],
+    reviews: [
+      { id: 1, user: "امیرحسین", comment: "قدرت فوق‌العاده‌ای داره، بازی‌ها رو راحت اجرا می‌کنه.", rating: 5 },
+      { id: 2, user: "سارا", comment: "طراحیش خیلی عالیه ولی وزنش کمی زیاده.", rating: 4 }
+    ]
   },
   {
     id: 2,
-    name: "موس بییمیت لاجیتک",
+    name: "موس بی‌سیم لاجیتک",
     price: "2'100'000",
     image: mouseImg,
     stock: 0,
     discount: 0,
     sales: 450,
     category: "accessories",
+    features: ["سنسور اپتیکال حرفه‌ای", "عمر باتری 24 ماهه", "اتصال بلوتوث و دانگل", "طراحی ارگونومیک"],
+    reviews: [
+      { id: 1, user: "نیما", comment: "خیلی خوش‌دسته، دقتش هم برای کارهای اداری عالیه.", rating: 5 }
+    ]
   },
   {
     id: 3,
@@ -35,6 +44,11 @@ export const productsList = [
     discount: 20,
     sales: 85,
     category: "accessories",
+    features: ["سوییچ‌های زرد ریزر", "نورپردازی RGB", "بدنه آلومینیومی", "استراحتگاه مچ دست"],
+    reviews: [
+      { id: 1, user: "مهدی", comment: "صدای کلیدهاش فوق‌العاده‌ست. نورپردازیش هم حرف نداره.", rating: 5 },
+      { id: 2, user: "رضا", comment: "کمی قیمتش بالاست ولی ارزش خرید داره.", rating: 4 }
+    ]
   },
   {
     id: 4,
@@ -45,6 +59,10 @@ export const productsList = [
     discount: 0,
     sales: 300,
     category: "audio",
+    features: ["نویز کنسلینگ هوشمند", "باتری 30 ساعته", "کیفیت صدای Hi-Res", "قابلیت اتصال چندگانه"],
+    reviews: [
+      { id: 1, user: "مریم", comment: "بهترین نویز کنسلینگی که تا حالا تجربه کردم!", rating: 5 }
+    ]
   },
   {
     id: 5,
@@ -55,6 +73,10 @@ export const productsList = [
     discount: 5,
     sales: 40,
     category: "monitor",
+    features: ["پنل VA با کیفیت 4K", "تکنولوژی HDR10", "نرخ نوسازی 60Hz", "ورودی HDMI و DisplayPort"],
+    reviews: [
+      { id: 1, user: "امید", comment: "رنگ‌ها خیلی زنده هستن. برای تماشای فیلم عالیه.", rating: 4 }
+    ]
   },
   {
     id: 6,
@@ -65,6 +87,10 @@ export const productsList = [
     discount: 0,
     sales: 15,
     category: "office",
+    features: ["چاپ، اسکن و کپی", "قابلیت اتصال Wi-Fi", "سرعت چاپ بالا", "مصرف بهینه جوهر"],
+    reviews: [
+      { id: 1, user: "بهار", comment: "کاربریش راحته و سریع به گوشی وصل میشه.", rating: 5 }
+    ]
   },
   {
     id: 7,
@@ -75,6 +101,10 @@ export const productsList = [
     discount: 0,
     sales: 210,
     category: "laptop",
+    features: ["تراشه قدرتمند M2", "نمایشگر Liquid Retina", "بدنه فوق باریک", "عمر باتری 18 ساعته"],
+    reviews: [
+      { id: 1, user: "آرش", comment: "سرعتش در کارهای سنگین واقعا عجیبه. خیلی سبکه.", rating: 5 }
+    ]
   },
   {
     id: 8,
@@ -85,6 +115,10 @@ export const productsList = [
     discount: 30,
     sales: 600,
     category: "accessories",
+    features: ["سطح پارچه‌ای میکرو بافت", "لبه‌های دوردوزی شده", "کف لاستیکی ضد لغزش", "ابعاد بزرگ"],
+    reviews: [
+      { id: 1, user: "یاسین", comment: "قیمت عالی و جنس خوب. خیلی بزرگ و راحته.", rating: 5 }
+    ]
   },
   {
     id: 9,
@@ -95,6 +129,10 @@ export const productsList = [
     discount: 0,
     sales: 180,
     category: "audio",
+    features: ["صدای قدرتمند JBL Pro", "کاملا ضد آب (IP67)", "پخش 12 ساعته موسیقی", "قابلیت PartyBoost"],
+    reviews: [
+      { id: 1, user: "علی", comment: "صدای بیسش واقعا بلنده. برای تفریح عالیه.", rating: 5 }
+    ]
   },
   {
     id: 10,
@@ -105,6 +143,10 @@ export const productsList = [
     discount: 10,
     sales: 95,
     category: "accessories",
+    features: ["طراحی کم‌صدا", "کلیدهای مولتی‌مدیا", "عمر باتری طولانی", "اتصال امن 2.4GHz"],
+    reviews: [
+      { id: 1, user: "زهرا", comment: "برای تایپ طولانی اصلا دست رو خسته نمی‌کنه.", rating: 4 }
+    ]
   },
   {
     id: 11,
@@ -115,6 +157,10 @@ export const productsList = [
     discount: 15,
     sales: 30,
     category: "monitor",
+    features: ["انحنای 1500R", "نرخ نوسازی 240Hz", "زمان پاسخگویی 1ms", "تکنولوژی FreeSync"],
+    reviews: [
+      { id: 1, user: "حسین", comment: "تجربه بازی رو کاملا عوض می‌کنه. سرعتش بی‌نظیره.", rating: 5 }
+    ]
   },
   {
     id: 12,
@@ -125,6 +171,10 @@ export const productsList = [
     discount: 0,
     sales: 22,
     category: "office",
+    features: ["چاپ تک رنگ سریع", "کارتریج با ظرفیت بالا", "اشغال فضای کم", "کیفیت چاپ متون عالی"],
+    reviews: [
+      { id: 1, user: "پیمان", comment: "برای دفتر کار من بهترین انتخاب بود. خرابی نداره.", rating: 5 }
+    ]
   },
   {
     id: 13,
@@ -135,6 +185,10 @@ export const productsList = [
     discount: 25,
     sales: 410,
     category: "audio",
+    features: ["فوم حافظه‌دار فوق نرم", "صدای محیطی 7.1", "میکروفون جداشونده", "بدنه فلزی مقاوم"],
+    reviews: [
+      { id: 1, user: "فرهاد", comment: "ساعت‌ها روی سر می‌مونه بدون اینکه اذیت کنه.", rating: 5 }
+    ]
   },
   {
     id: 14,
@@ -145,6 +199,10 @@ export const productsList = [
     discount: 8,
     sales: 55,
     category: "laptop",
+    features: ["پردازنده Ryzen 7", "گرافیک RTX 3060", "سیستم خنک‌کننده پیشرفته", "نورپردازی کیبورد RGB"],
+    reviews: [
+      { id: 1, user: "کامران", comment: "نسبت به قیمتش سخت‌افزار خیلی خوبی داره.", rating: 4 }
+    ]
   },
   {
     id: 15,
@@ -155,6 +213,10 @@ export const productsList = [
     discount: 0,
     sales: 140,
     category: "accessories",
+    features: ["سنسور Focus+", "سوییچ‌های اپتیکال نسل ۲", "وزن بسیار سبک", "کابل منعطف Speedflex"],
+    reviews: [
+      { id: 1, user: "سعید", comment: "سرعت واکنش کلیدهاش عالیه. بهترین موس برای شوتینگ.", rating: 5 }
+    ]
   },
   {
     id: 16,
@@ -165,6 +227,10 @@ export const productsList = [
     discount: 0,
     sales: 75,
     category: "accessories",
+    features: ["کیفیت تصویر Ultra HD", "زوم 5 برابر دیجیتال", "میکروفون دوگانه استریو", "فناوری HDR"],
+    reviews: [
+      { id: 1, user: "هانیه", comment: "برای استریم و جلسات آنلاین کیفیتش بی‌رقیبه.", rating: 5 }
+    ]
   },
   {
     id: 17,
@@ -175,6 +241,10 @@ export const productsList = [
     discount: 12,
     sales: 280,
     category: "storage",
+    features: ["مقاوم در برابر ضربه", "پورت USB 3.2", "سرعت انتقال بالا", "بدنه ضد شوک"],
+    reviews: [
+      { id: 1, user: "جواد", comment: "خیلی محکم و با خیالی راحت دیتا رو توش می‌ریزم.", rating: 4 }
+    ]
   },
   {
     id: 18,
@@ -185,6 +255,10 @@ export const productsList = [
     discount: 0,
     sales: 500,
     category: "power",
+    features: ["شارژ سریع 22.5W", "سه پورت خروجی", "نمایشگر دیجیتال", "ظرفیت واقعی بالا"],
+    reviews: [
+      { id: 1, user: "میلاد", comment: "گوشیم رو ۳ بار کامل شارژ می‌کنه. عالیه.", rating: 5 }
+    ]
   },
   {
     id: 19,
@@ -195,6 +269,10 @@ export const productsList = [
     discount: 40,
     sales: 1000,
     category: "accessories",
+    features: ["پشتیبانی از 8K 60Hz", "روکش کنفی مقاوم", "سرعت 48Gbps", "کانکتورهای طلا اندود"],
+    reviews: [
+      { id: 1, user: "سینا", comment: "تصویر رو بدون نویز منتقل می‌کنه. جنسش خیلی خوبه.", rating: 5 }
+    ]
   },
   {
     id: 20,
@@ -205,5 +283,9 @@ export const productsList = [
     discount: 0,
     sales: 12,
     category: "audio",
-  },
+    features: ["الگوی قطبی کاردیوئید", "پورت اتصال USB-C", "خروجی هدفون مانیتورینگ", "کنترل گین روی بدنه"],
+    reviews: [
+      { id: 1, user: "داوود", comment: "صدای گرم و شفافی ضبط می‌کنه. برای پادکست عالیه.", rating: 5 }
+    ]
+  }
 ];
