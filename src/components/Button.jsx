@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ children, variant = "primary", className = "", ...props }) => {
+const Button = ({ children, onClick, variant = "primary", className = "", ...props }) => {
   // ۱. تعریف استایل‌های پایه (چیزهایی که در همه دکمه‌ها مشترک است)
   const baseStyle =
     "px-6 py-2 rounded-lg font-medium transition-all duration-300 active:scale-90";
@@ -17,7 +17,7 @@ const Button = ({ children, variant = "primary", className = "", ...props }) => 
   const disabledStyle = "disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale disabled:shadow-none disabled:active:scale-100";
 
   return (
-    <button className={`${baseStyle} ${variants[variant]} ${disabledStyle} ${className}`} {...props}>
+    <button onClick={onClick} className={`${baseStyle} ${variants[variant]} ${disabledStyle} ${className}`} {...props}>
       {children}
     </button>
   );
