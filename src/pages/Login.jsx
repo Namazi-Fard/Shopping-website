@@ -74,7 +74,7 @@ const Login = ({ isModal, onClose }) => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors"
+          className="font-primary w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors"
         >
           ورود به سایت
         </button>

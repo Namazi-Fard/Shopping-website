@@ -58,12 +58,6 @@ function App() {
   // Define buttons inside the function to access handleAuthClick
   const authButtons = (
     <>
-      <button
-        className="bg-red-500 p-2 text-white"
-        onClick={() => alert("تست دکمه خام")}
-      >
-        تست مستقیم
-      </button>
       <Button
         onClick={handleAuthClick}
         variant="outline"

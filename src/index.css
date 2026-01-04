@@ -1,7 +1,15 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
 
+/* English comment: Define the theme first so Tailwind knows your variables */
 @theme {
+  --font-hamishe-bold: "Hamishe-Bold", sans-serif;
+  --font-hamishe-regular: "Hamishe-Regular", sans-serif;
+  --font-koodak-bold: "Koodak-Bold", sans-serif;
+  --font-lalezar-plus-circle: "Lalezar-Plus-Circle", sans-serif;
+  --font-lalezar-plus-grunge: "Lalezar-Plus-Grunge", sans-serif;
+  --font-lalezar-plus: "Lalezar-Plus", sans-serif;
+  --font-trafic-bold: "Trafic-Bold", sans-serif;
+
   @keyframes float {
 
     0%,
@@ -17,12 +25,58 @@
   --animate-floating: float 3s ease-in-out infinite;
 }
 
+/* We Should Use @layer base after @import and @theme to avoid "unknown utility" error */
+
 @layer base {
   body {
-    @apply bg-white text-gray-900 transition-colors duration-500 ease-in-out;
+    font-family: var(--font-lalezar-plus-circle);
+    background-color: white;
+    color: #111827;
+    /* معادل text-gray-900 */
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
   }
 
   .dark body {
-    @apply bg-gray-950 text-gray-100;
+    background-color: #030712;
+    /* معادل bg-gray-950 */
+    color: #f3f4f6;
+    /* معادل text-gray-100 */
   }
+}
+
+@font-face {
+  font-family: 'Hamishe-Bold';
+  src: url('./assets/fonts/Digi-Hamishe-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hamishe-Regular';
+  src: url('./assets/fonts/Digi-Hamishe-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Koodak-Bold';
+  src: url('./assets/fonts/Digi-Koodak-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lalezar-Plus-Circle';
+  src: url('./assets/fonts/Digi-Lalezar-Plus-Circle.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lalezar-Plus-Grunge';
+  src: url('./assets/fonts/Digi-Lalezar-Plus-Grunge.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lalezar-Plus';
+  src: url('./assets/fonts/Digi-Lalezar-Plus.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Trafic-Bold';
+  src: url('./assets/fonts/Digi-Trafic-Bold.ttf') format('truetype');
 }

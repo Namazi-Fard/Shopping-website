@@ -60,7 +60,7 @@ const Navbar = ({ logo, links = [], actions, className = "",isMenuOpen, setIsMen
           <div className="flex items-center gap-2 dark:text-white">{logo}</div>
         </div>
         {/* desktop links */}
-        <ul className="hidden md:flex items-center gap-8 text-gray-600 dark:text-gray-300 font-medium">
+        <ul className="hidden md:flex items-center gap-8 text-gray-600 dark:text-gray-300 font-medium text-xl">
           {links.map((link, index) => (
             <li key={index}>
               <NavLink
