@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
-/* English comment: Define the theme first so Tailwind knows your variables */
+/* English comment: Define your fonts in the theme block so they become utility classes */
 @theme {
   --font-hamishe-bold: "Hamishe-Bold", sans-serif;
   --font-hamishe-regular: "Hamishe-Regular", sans-serif;
@@ -11,71 +12,49 @@
   --font-trafic-bold: "Trafic-Bold", sans-serif;
 
   @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
   }
-
   --animate-floating: float 3s ease-in-out infinite;
 }
 
-/* We Should Use @layer base after @import and @theme to avoid "unknown utility" error */
-
 @layer base {
   body {
-    font-family: var(--font-lalezar-plus-circle);
-    background-color: white;
-    color: #111827;
-    /* معادل text-gray-900 */
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
+    /* English comment: Apply the main font using the variable defined above */
+    font-family: var(--font-koodak-bold);
+    @apply bg-white text-gray-900 transition-colors duration-500 ease-in-out;
   }
 
   .dark body {
-    background-color: #030712;
-    /* معادل bg-gray-950 */
-    color: #f3f4f6;
-    /* معادل text-gray-100 */
+    @apply bg-gray-950 text-gray-100;
   }
 }
 
+/* English comment: Font-face declarations to link the actual files */
 @font-face {
   font-family: 'Hamishe-Bold';
   src: url('./assets/fonts/Digi-Hamishe-Bold.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Hamishe-Regular';
   src: url('./assets/fonts/Digi-Hamishe-Regular.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Koodak-Bold';
   src: url('./assets/fonts/Digi-Koodak-Bold.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Lalezar-Plus-Circle';
   src: url('./assets/fonts/Digi-Lalezar-Plus-Circle.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Lalezar-Plus-Grunge';
   src: url('./assets/fonts/Digi-Lalezar-Plus-Grunge.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Lalezar-Plus';
   src: url('./assets/fonts/Digi-Lalezar-Plus.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Trafic-Bold';
   src: url('./assets/fonts/Digi-Trafic-Bold.ttf') format('truetype');
